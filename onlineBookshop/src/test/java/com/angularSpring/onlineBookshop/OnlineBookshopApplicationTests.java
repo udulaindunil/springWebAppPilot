@@ -14,30 +14,30 @@ import com.angularSpring.onlineBookshop.service.BookServiceImpl;
 @SpringBootTest
 class OnlineBookshopApplicationTests {
 
-	@Autowired
-	BookServiceImpl x;
-
-	@Test
-	void contextLoads() {
-
-		Date date = new Date();
-
-		Book b = new Book();
-		b.setName("name here");
-		b.setDescription("Description");
-		b.setSubject("Sublect");
-		b.setImageUrl("Url");
-		b.setActive(true);
-		b.setUnitPrice(200);
-		b.setUnitsInStock(100);
-		b.setCreatedOn(date);
-		b.setUpdatedOn(date);
-		
-		b.toString();
-		System.out.println(b);
-		
-		x.saveBook(b);
-
-	}
+//	@Autowired
+//	BookServiceImpl x;
+//
+//	@Test
+//	void contextLoads() {
+//
+//		Date date = new Date();
+//
+//		Book b = new Book();
+//		b.setName("name 2");
+//		b.setDescription("Description 2");
+//		b.setSubject("Sublect 2");
+//		b.setImageUrl("Url");
+//		b.setActive(true);
+//		b.setUnitPrice(200);
+//		b.setUnitsInStock(100);
+//		b.setCreatedOn(date);
+//		b.setUpdatedOn(date);
+//
+//		b.toString();
+////		System.out.println(b);
+//
+////		x.saveBook(b);
+//
+//	}
 
 }

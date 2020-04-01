@@ -1,0 +1,7 @@
+<p>book-list works!</p>
+<div *ngIf="books let books; else elseBlock" >
+    <li *ngFor="let book of books; index as i;">
+        {{i}}{{book.name}}
+    </li>
+</div>
+<ng-template #elseBlock>Content to render when condition is false.</ng-template>
