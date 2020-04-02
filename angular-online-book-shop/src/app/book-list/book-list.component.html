@@ -1,29 +1,23 @@
-<p>book-list works!</p>
-<div class="col-8" *ngIf="books let books; else elseBlock" >
+<div class="container">
+<div class="row" *ngIf="books let books; else elseBlock"  >
 
-    <table>
-        <tr>
-            <th>Index</th>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Subject</th>
-            <th>Image</th>
-            <!-- <th>Category</th> -->
-            <th>State</th>
-
-        </tr>
-        <tr *ngFor="let book of books; index as i;">
-             <td>{{i+1}}</td>
-             <td>{{book.id}}</td>
-             <td>{{book.name}}</td>
-             <td>{{book.subject}}</td>
-             <td><img src="{{book.imageUrl}}" height="100px" width="70px"> </td>
-             <!-- <td>{{book.category}}</td> -->
-             <td>{{book.active}}</td>
-        </tr>
-    </table>
-
+    <div class="col-md-6" *ngFor="let book of books; index as i;">
+        <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary">{{book.subject}}</strong>
+            <h3 class="mb-0">{{book.name}}</h3>
+            <div class="mb-1 text-muted">{{book.createOn}}</div>
+            <p class="card-text mb-auto">{{book.description}} </p>
+            <a href="#" class="stretched-link">{{book.unitPrice}} Rs /-</a>
+            <button mat-raised-button style="width: 30%; align-content: center;">Add Cart</button>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+            <img class="bd-placeholder-img" width="200" height="250" src="{{book.imageUrl}}"/>
+          </div>
+        </div>
+      </div>
 </div>
 
 
 <ng-template #elseBlock>Content to render when condition is false.</ng-template>
+</div>
