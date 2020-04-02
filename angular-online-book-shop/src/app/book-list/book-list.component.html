@@ -1,7 +1,29 @@
 <p>book-list works!</p>
-<div *ngIf="books let books; else elseBlock" >
-    <li *ngFor="let book of books; index as i;">
-        {{i}}{{book.name}}
-    </li>
+<div class="col-8" *ngIf="books let books; else elseBlock" >
+
+    <table>
+        <tr>
+            <th>Index</th>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Subject</th>
+            <th>Image</th>
+            <!-- <th>Category</th> -->
+            <th>State</th>
+
+        </tr>
+        <tr *ngFor="let book of books; index as i;">
+             <td>{{i+1}}</td>
+             <td>{{book.id}}</td>
+             <td>{{book.name}}</td>
+             <td>{{book.subject}}</td>
+             <td><img src="{{book.imageUrl}}" height="100px" width="70px"> </td>
+             <!-- <td>{{book.category}}</td> -->
+             <td>{{book.active}}</td>
+        </tr>
+    </table>
+
 </div>
+
+
 <ng-template #elseBlock>Content to render when condition is false.</ng-template>
