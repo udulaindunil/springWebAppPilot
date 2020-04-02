@@ -32,11 +32,12 @@ class OnlineBookshopApplicationTests {
 //		b.setUnitsInStock(100);
 //		b.setCreatedOn(date);
 //		b.setUpdatedOn(date);
+//		b.setCategory(1);
 //
 //		b.toString();
-////		System.out.println(b);
-//
-////		x.saveBook(b);
+//		System.out.println(b);
+
+//		x.saveBook(b);
 //
 //	}
 

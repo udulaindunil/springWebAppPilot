@@ -9,11 +9,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "tbl_book")
-
 public class Book {
 
 	@Id
@@ -42,6 +43,10 @@ public class Book {
 
 	@Column(name = "updatedon")
 	private Date updatedOn;
+
+	@ManyToOne
+	@JoinColumn(name = "caregoryid", nullable = false)
+	private BookCategory category;
 
 	public Long getId() {
 		return id;
@@ -122,6 +127,14 @@ public class Book {
 
 	public void setSubject(String subject) {
 		this.subject = subject;
+	}
+
+	public BookCategory getCategory() {
+		return category;
+	}
+
+	public void setCategory(BookCategory category) {
+		this.category = category;
 	}
 
 	@Override
