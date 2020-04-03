@@ -15,6 +15,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FooterComponent } from './footer/footer.component';
 import { NavigationsComponent } from './navigations/navigations.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { BookCategoryComponent } from './book-category/book-category.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     BooksComponent,
     FooterComponent,
     NavigationsComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    BookCategoryComponent
   ],
   imports: [
     BrowserModule,

@@ -5,16 +5,10 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="collapse navbar-collapse" id="navbarCollapse" *ngIf="bookCategories let categories">
               <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" routerLink="/category/1" routerLinkActive="bg-dark text-weight-bold"  >Web Devlopment<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/category/2" routerLinkActive="bg-dark text-weight-bold"  >Programming</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/category/3" routerLinkActive="bg-dark text-weight-bold"  >Database</a>
+                <li class="nav-item" *ngFor="let category of categories;" >
+                  <a class="nav-link" routerLink="/category/{{category.id}}" routerLinkActive="bg-dark text-weight-bold"  >{{category.categoryName}}</a>
                 </li>
               </ul>
               <form class="form-inline mt-2 mt-md-0">
