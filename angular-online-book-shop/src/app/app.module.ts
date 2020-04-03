@@ -10,11 +10,20 @@ import { HttpClientModule } from '@angular/common/http';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { BooksComponent } from './books/books.component';
+import { AppRoutingModule } from './app-routing.module';
+import { FooterComponent } from './footer/footer.component';
+import { NavigationsComponent } from './navigations/navigations.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BookListComponent
+    BookListComponent,
+    BooksComponent,
+    FooterComponent,
+    NavigationsComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +33,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     HttpClientModule,
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    AppRoutingModule
   ],
   providers: [BookService],
   bootstrap: [AppComponent]

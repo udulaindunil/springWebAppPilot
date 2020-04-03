@@ -21,11 +21,7 @@
       height: 100%;
   }
 
-  .footer{
-      position: absolute;
-      bottom: 10px;
-      height: 60px;
-  }
+
 
   .wrapper{
       min-height: 100%;
